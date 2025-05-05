@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "axios": "^1.9.0"
+  },
+ "scripts": {
+  "build": "npm install --prefix backend && npm install --prefix ui --legacy-peer-deps  && npm run build --prefix ui",
+  "start": "npm run start --prefix Backend"
+}
+
+}

@@ -1,0 +1,194 @@
+
+.appContainer{
+
+  background-color: black !important;
+  height: 100vh;
+  width: 100vw;
+}
+.ai-message {
+  /* or your theme color */
+  color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 80%; /* Prevents full-width stretching */
+  white-space: pre-wrap; /* Preserves new lines & wraps text */
+  word-wrap: break-word; /* Forces wrapping of long words */
+  overflow-wrap: break-word; /* Ensures breaking of overflow text */
+  font-family: monospace; /* Matches the AI code block look */
+  overflow-x: auto; /* For code blocks or long inline content */
+}
+
+
+
+
+
+.orbitron-header {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.orbitron-header-sm {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.headLineText{
+
+  color: #F4F6FF !important;
+}
+
+.sine-container {
+  min-width: 450px;
+  height: 200px;
+  width: 30%;
+  
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background: #131314;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background: #ffffff; /* Changed to white dots */
+  border-radius: 50%;
+  position: absolute;
+  animation: sineWave 1.8s infinite ease-in-out;
+}
+
+/* Position each dot and offset their animation */
+.dot:nth-child(1) { left: 2%; animation-delay: 0s; }
+.dot:nth-child(2) { left: 10%; animation-delay: -0.2s; }
+.dot:nth-child(3) { left: 20%; animation-delay: -0.4s; }
+.dot:nth-child(4) { left: 30%; animation-delay: -0.6s; }
+.dot:nth-child(5) { left: 40%; animation-delay: -0.8s; }
+.dot:nth-child(6) { left: 50%; animation-delay: -1s; }
+.dot:nth-child(7) { left: 60%; animation-delay: -1.2s; }
+.dot:nth-child(8) { left: 70%; animation-delay: -1.4s; }
+.dot:nth-child(9) { left: 80%; animation-delay: -1.6s; }
+.dot:nth-child(10) { left: 90%; animation-delay: -1.8s; }
+
+@keyframes sineWave {
+  0% { top: 100px; transform: translateY(-80px); }
+  50% { top: 100px; transform: translateY(80px); }
+  100% { top: 100px; transform: translateY(-80px); }
+}
+
+/* Optional: Add a center line */
+.center-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  top: 100px;
+  z-index: -1;
+}
+@media (max-width:1025px){
+  .loginHeading{
+    font-size:60px !important;
+  }
+  .headLineText{
+    font-size: 25px !important;
+  }
+  .loginHeadlineContainer{
+    padding-right: 0px !important;
+  }
+}
+/* Tablet View */
+@media (max-width: 768px) {
+  .chatListContainer {
+    width: 45%;
+  }
+  .ai-message{
+    max-width: 100%;
+  }
+  .loginFluidContainer{
+    flex-direction: column !important;
+
+  }
+  .loginFluidContainer > div{
+    width: 100%;
+  }
+  .loginHeadlineContainer{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .loginHeadlineContainer img{
+    display: none;
+  }
+  .authFormContainer{
+    height: fit-content;
+    padding-bottom: 60px;
+    background: transparent;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 426px){
+  .loginHeading{
+    font-size:35px !important;
+  }
+  .headLineText{
+    font-size: 20px !important;
+  }
+  .authFormContainer{
+    width: 90%;
+    margin: 0px auto;
+    transform: scale(0.8)
+  }
+  .loginHeadlineContainer{
+    padding-right: 0px !important;
+  }
+   .noUserMobChatView{
+   
+      display: none !important;
+
+   }
+   .userMobChatView{
+      width: 100% !important;
+   }
+
+   .showChatList{
+    width: 100% !important;
+
+   }
+   .hideChatList{
+    display: none !important;
+   }
+
+   .signalViewMob{
+    display: none !important;
+   }
+
+   .userNameMob{
+    display: none !important;
+   }
+   .profileContainerMob{
+
+    margin:0px !important;
+    width: 100% !important;
+   }
+   .chatInputMob{
+    padding: 5px !important;
+   }
+
+   .emoji-picker-wrapper {
+    right: 0 !important;
+    left: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: 1s all ease-in-out;
+  }
+}
