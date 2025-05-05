@@ -3,7 +3,7 @@
     "axios": "^1.9.0"
   },
  "scripts": {
-  "build": "npm install --prefix backend && npm install --prefix ui --legacy-peer-deps  && npm run build --prefix ui",
+  "build": "npm install --prefix Backend && npm install --prefix UI --legacy-peer-deps  && npm run build --prefix UI",
   "start": "npm run start --prefix Backend"
 }
 
